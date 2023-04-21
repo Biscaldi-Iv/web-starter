@@ -1,5 +1,12 @@
 console.log('Hola Mundo');
 
+favicon = document.createElement("link");//<link rel="icon" type="image/x-icon" href="assets/images/mrx.jpg" alt="homero">
+favicon.rel = "icon";
+favicon.type = "image/x-icon";
+favicon.href = "/assets/images/mrx.jpg";
+
+document.head.appendChild(favicon);
+
 window.addEventListener('load', () => {
     const submitButton = document.querySelector('#submit');
     submitButton?.addEventListener('click', (event) => {
