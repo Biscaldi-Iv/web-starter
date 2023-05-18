@@ -14,12 +14,16 @@ window.addEventListener('load', () => {
         const name = document.querySelector('#name').value;
         const email = document.querySelector('#email').value;
         const message = document.querySelector('#message').value;
+        const phone = document.querySelector('#phone').value;
 
-        if (name !== '' && email !== '' && message !== '') {
+        if (name !== '' && email !== '' && message !== '' && phone !== '') {
             // ok
             document.querySelector('#user-name').innerHTML = name;
             document.querySelector('#user-email').innerHTML = email;
             document.querySelector('#user-message').innerHTML = message;
+            document.querySelector('#user-phone').innerHTML = phone;
+            document.querySelector('#verified').classList.add('show-verified');
+            document.querySelector('#error').classList.remove('show-error');
         } else {
             // error
             document.querySelector('#error').classList.add('show-error');
