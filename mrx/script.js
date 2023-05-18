@@ -40,7 +40,12 @@ function getUser() {
         })
         .then((response) => {
             const userData = response.results[0].name;
+            const userImg = response.results[0].picture.medium;
             document.querySelector('#user-name').innerHTML = `${userData.title}. ${userData.first} ${userData.last}`;
+            document.querySelector('#user-image').src = userImg;
+            document.querySelector('#usr').hidden = false;
         })
-        .catch((error) => console.log('aja', error));
+        .catch((error) => {
+            document.querySelector('#error').classList.add('show-error');
+        });
 }

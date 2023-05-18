@@ -19,11 +19,15 @@
         </div>
         <div class="container-right">
             <h2>Descubre la identidad de Mr. X !</h2>
-            <img class="user-img" src="assets/images/mrx.jpg" alt="Mr X">
+            <img id="user-img" class="user-img" src="assets/images/mrx.jpg" alt="Mr X">
 
             <button id="get-user">Descubrir</button>
+            <div id="usr" hidden>
+                <p class="user" id="user-name"></p>
+                <img id="user-image" class="user-img">
+            </div>
+            <span class="error" id="error">No se ha podido recuperar el usuario. Por favor inténtelo más tarde.</span>
 
-            <p class="user" id="user-name"></p>
         </div>
     </div>
 </body>
